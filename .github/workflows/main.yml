@@ -40,4 +40,4 @@ jobs:
           tags: ${{secrets.DOCKER_HUB_USERNAME}}/simplewhale:latest
           
       - name: Image digest
-        run: echo ${{ step.docker_build.outputs.digest }}
+        run: echo ${{ steps.docker_build.outputs.digest }}
