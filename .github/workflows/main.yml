@@ -49,6 +49,3 @@ jobs:
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/finallab -f Dockerfile .
           docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/finallab
-          
-      - name: run on azure
-        run: docker run -p 80:5000 -d ${{ secrets.DOCKER_HUB_USERNAME }}/finallab
