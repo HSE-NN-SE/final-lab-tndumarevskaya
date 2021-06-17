@@ -53,4 +53,4 @@ jobs:
         run: |
           docker ps
           docker rm -f tanya2009/finallab
-          docker run -p 30:5000 tanya2009/finallab --name tanya2009/finallab
+          docker run -p 30:5000 --name tanya2009/finallab tanya2009/finallab
