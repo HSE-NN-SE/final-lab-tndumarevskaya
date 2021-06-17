@@ -52,5 +52,5 @@ jobs:
       - name: Run on azure
         run: |
           docker ps
-          docker rm -f tanya2009/finallab
-          docker run -p 30:5000 --name tanya2009/finallab tanya2009/finallab
+          docker rm -f finallab
+          docker run -p 30:5000 --name finallab tanya2009/finallab
