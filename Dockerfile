@@ -6,4 +6,4 @@ COPY . /app
 WORKDIR /app
 ENV FLASK_APP=js_example
 RUN pip install -r requirements.txt
-CMD python -m flask run --host=0.0.0.0
+CMD python3 -m flask run --host=0.0.0.0
