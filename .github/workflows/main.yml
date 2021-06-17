@@ -52,5 +52,5 @@ jobs:
       - name: build_and_push
         run: |
           sudo docker build . --tag finallab
-          sudo docker image tag finallab ${{ secrets.DOCKER_HUB_USERNAME }}/finallab
+          sudo docker tag finallab ${{ secrets.DOCKER_HUB_USERNAME }}/finallab
           sudo docker push ${{ secrets.DOCKER_HUB_USERNAME }}/finallab
