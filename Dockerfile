@@ -1,13 +1,9 @@
-FROM ubuntu
-RUN apt update && apt upgrade
-RUN apt-get install -y python
+FROM ubuntu:latest
+RUN apt update
+RUN apt install -y git
 RUN apt install -y python3-pip
-COPY javascript-ajax-example .
-RUN pip install flask
-RUN apt-get install -y python3-venv
-RUN puthon3 -m venv venv
-RUN . venv/bin/activate
-RUN pip install -e .
+RUN pip3 install flask
+RUN git clone https://github.com/HSE-NN-SE/final-lab-tndumarevskaya.git
+RUN cd final-lab-tndumarevskaya
 ENV FLASK_APP=js_example
-EXPOSE 5000
 CMD python3 -m flask run -h 0.0.0.0
