@@ -1,9 +1,6 @@
-FROM python:3.8-slim-buster
-EXPOSE 5000
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-COPY . /app
+FROM python:3
 WORKDIR /app
-ENV FLASK_APP=js_example
-RUN pip install -r requirements.txt
+COPY . .
+RUN pip install flask
+ENV FLASK_APP "js_example"
 CMD python -m flask run -h localhost
